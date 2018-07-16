@@ -4,7 +4,7 @@ String.prototype.capitalize = function() {
 
 
 class Pokemon {
-    constructor(name, pokeId, hp, attack, defense, frontURL, backURL, ability) {
+    constructor(name, pokeId, hp, attack, defense, frontURL, backURL) {
         this.name = name;
         this.pokeId = pokeId;
         this.hp = hp;
@@ -12,6 +12,7 @@ class Pokemon {
         this.defense = defense;
         this.frontURL = frontURL;
         this.backURL = backURL;
+        // this.order = order;
         this.ability = [];
     }
 }
@@ -23,43 +24,68 @@ class Trainer {
         this.pokeCount = 0;
     }
     all() {
-        return pokemonArray;
+        console.log(Object.keys(this.trainerPokemon))
     }
     get(name) {
-        return trainerPokemon.name;
+        console.log(this.trainerPokemon[name]);
     }
-    add(pokemonObject) {
-        this.trainerPokemon[pokemonObject.name] = pokemonObject
-        this.pokeCount++
+    add(id) {
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
+            let pokedata = response.data
+            let pokeName = pokedata.name;
+            let pokeId = pokedata.id;
+            let pokeHp = pokedata.stats[5].base_stat;
+            let pokeAtt = pokedata.stats[4].base_stat;
+            let pokeDef = pokedata.stats[3].base_stat;
+            let pokeFrontURL = pokedata.sprites.front_default
+            let pokeBackURL = pokedata.sprites.back_default
+                // console.log(pokemonNumber)
+
+            let pokemonObject = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL)
+            pokedata.abilities.forEach(element => {
+                pokemonObject.ability.push((element.ability.name))
+            });
+            this.trainerPokemon[pokemonObject.name] = pokemonObject;
+            this.pokeCount++
+                // console.log(pokemonObject);
+        })
+
+
     }
 }
 
-let addPokemon = (id) => {
-    axios.get('https://pokeapi.co/api/v2/pokemon/' + id + '/').then((response) => {
-        let pokedata = response.data
-        let pokeName = pokedata.name;
-        let pokeId = pokedata.id;
-        let pokeHp = pokedata.stats[5].base_stat;
-        let pokeAtt = pokedata.stats[4].base_stat;
-        let pokeDef = pokedata.stats[3].base_stat;
-        let pokeFrontURL = pokedata.sprites.front_default
-        let pokeBackURL = pokedata.sprites.back_default
-            // console.log(pokemonNumber)
+let shahid = new Trainer("shahid")
+shahid.add(150)
+    // shahid.get("mewtwo")
+shahid.add(129)
+    // shahid.get("magikarp")
+shahid.add(126)
 
-        let pokemonnn = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL)
-        console.log(pokemonnn);
-    })
-}
 
-let mewtwo = addPokemon(150);
-// console.log(mewtwo)
 
-trainer.addPk(mewtwo)
 
-let magikarp = addPokemon(129);
 
-trainer.add(150)
 
+
+
+
+
+// let addPokemon = (id) => {
+//     axios.get('https://pokeapi.co/api/v2/pokemon/' + id + '/').then((response) => {
+//         let pokedata = response.data
+//         let pokeName = pokedata.name;
+//         let pokeId = pokedata.id;
+//         let pokeHp = pokedata.stats[5].base_stat;
+//         let pokeAtt = pokedata.stats[4].base_stat;
+//         let pokeDef = pokedata.stats[3].base_stat;
+//         let pokeFrontURL = pokedata.sprites.front_default
+//         let pokeBackURL = pokedata.sprites.back_default
+//             // console.log(pokemonNumber)
+
+//         let pokemonnn = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL)
+//         console.log(pokemonnn);
+//     })
+// }
 
 
 // axios.get('https://pokeapi.co/api/v2/pokemon/?limit=949').then((response) => {

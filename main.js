@@ -4,7 +4,7 @@ String.prototype.capitalize = function() {
 
 
 class Pokemon {
-    constructor(name, pokeId, hp, attack, defense, frontURL, backURL, ability) {
+    constructor(name, pokeId, hp, attack, defense, frontURL, backURL) {
         this.name = name;
         this.pokeId = pokeId;
         this.hp = hp;
@@ -12,6 +12,7 @@ class Pokemon {
         this.defense = defense;
         this.frontURL = frontURL;
         this.backURL = backURL;
+        // this.order = order;
         this.ability = [];
     }
 }
@@ -23,13 +24,13 @@ class Trainer {
         this.pokeCount = 0;
     }
     all() {
-        return pokemonArray;
+        console.log(Object.keys(this.trainerPokemon))
     }
     get(name) {
-        return this.trainerPokemon[name];
+        console.log(this.trainerPokemon[name]);
     }
     add(id) {
-        axios.get('https://pokeapi.co/api/v2/pokemon/' + id + '/').then((response) => {
+        axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
             let pokedata = response.data
             let pokeName = pokedata.name;
             let pokeId = pokedata.id;
@@ -55,9 +56,10 @@ class Trainer {
 
 let shahid = new Trainer("shahid")
 shahid.add(150)
-shahid.get("mewtwo")
+    // shahid.get("mewtwo")
 shahid.add(129)
-shahid.get("magikarp")
+    // shahid.get("magikarp")
+shahid.add(126)
 
 
 

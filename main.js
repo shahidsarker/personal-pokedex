@@ -26,12 +26,9 @@ class Trainer {
         return pokemonArray;
     }
     get(name) {
-        return trainerPokemon.name;
+        // return trainerPokemon.name;
     }
     add(id) {
-        // this.trainerPokemon[pokemonObject.name] = pokemonObject
-        // this.pokeCount++
-
         axios.get('https://pokeapi.co/api/v2/pokemon/' + id + '/').then((response) => {
             let pokedata = response.data
             let pokeName = pokedata.name;
@@ -44,12 +41,30 @@ class Trainer {
                 // console.log(pokemonNumber)
 
             let pokemonObject = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL)
-            this.pokeCount++
-                console.log(pokemonObject);
+            pokedata.abilities.forEach(element => {
+                pokemonObject.ability.push((element.ability.name).capitalize())
+            });
+
+            console.log(pokemonObject);
         })
+        this.trainerPokemon[pokemonObject.name] = pokemonObject
 
     }
 }
+
+let shahid = new Trainer("shahid")
+shahid.add(150)
+shahid.get("Mewtwo")
+
+
+
+
+
+
+
+
+
+
 
 // let addPokemon = (id) => {
 //     axios.get('https://pokeapi.co/api/v2/pokemon/' + id + '/').then((response) => {

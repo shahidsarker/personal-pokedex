@@ -47,17 +47,18 @@ let addPokemon = (id) => {
             // console.log(pokemonNumber)
 
         let pokemonnn = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL)
-        console.log(pokemonnn.name);
+        console.log(pokemonnn);
     })
-
-
 }
 
 let mewtwo = addPokemon(150);
 // console.log(mewtwo)
 
+trainer.addPk(mewtwo)
+
 let magikarp = addPokemon(129);
 
+trainer.add(150)
 
 
 

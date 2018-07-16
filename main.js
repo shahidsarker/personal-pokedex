@@ -28,38 +28,45 @@ class Trainer {
     get(name) {
         return trainerPokemon.name;
     }
-    add(pokemonObject) {
-        this.trainerPokemon[pokemonObject.name] = pokemonObject
-        this.pokeCount++
+    add(id) {
+        // this.trainerPokemon[pokemonObject.name] = pokemonObject
+        // this.pokeCount++
+
+        axios.get('https://pokeapi.co/api/v2/pokemon/' + id + '/').then((response) => {
+            let pokedata = response.data
+            let pokeName = pokedata.name;
+            let pokeId = pokedata.id;
+            let pokeHp = pokedata.stats[5].base_stat;
+            let pokeAtt = pokedata.stats[4].base_stat;
+            let pokeDef = pokedata.stats[3].base_stat;
+            let pokeFrontURL = pokedata.sprites.front_default
+            let pokeBackURL = pokedata.sprites.back_default
+                // console.log(pokemonNumber)
+
+            let pokemonObject = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL)
+            this.pokeCount++
+                console.log(pokemonObject);
+        })
+
     }
 }
 
-let addPokemon = (id) => {
-    axios.get('https://pokeapi.co/api/v2/pokemon/' + id + '/').then((response) => {
-        let pokedata = response.data
-        let pokeName = pokedata.name;
-        let pokeId = pokedata.id;
-        let pokeHp = pokedata.stats[5].base_stat;
-        let pokeAtt = pokedata.stats[4].base_stat;
-        let pokeDef = pokedata.stats[3].base_stat;
-        let pokeFrontURL = pokedata.sprites.front_default
-        let pokeBackURL = pokedata.sprites.back_default
-            // console.log(pokemonNumber)
+// let addPokemon = (id) => {
+//     axios.get('https://pokeapi.co/api/v2/pokemon/' + id + '/').then((response) => {
+//         let pokedata = response.data
+//         let pokeName = pokedata.name;
+//         let pokeId = pokedata.id;
+//         let pokeHp = pokedata.stats[5].base_stat;
+//         let pokeAtt = pokedata.stats[4].base_stat;
+//         let pokeDef = pokedata.stats[3].base_stat;
+//         let pokeFrontURL = pokedata.sprites.front_default
+//         let pokeBackURL = pokedata.sprites.back_default
+//             // console.log(pokemonNumber)
 
-        let pokemonnn = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL)
-        console.log(pokemonnn);
-    })
-}
-
-let mewtwo = addPokemon(150);
-// console.log(mewtwo)
-
-trainer.addPk(mewtwo)
-
-let magikarp = addPokemon(129);
-
-trainer.add(150)
-
+//         let pokemonnn = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL)
+//         console.log(pokemonnn);
+//     })
+// }
 
 
 // axios.get('https://pokeapi.co/api/v2/pokemon/?limit=949').then((response) => {

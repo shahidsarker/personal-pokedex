@@ -4,7 +4,7 @@ String.prototype.capitalize = function() {
 
 
 class Pokemon {
-    constructor(name, pokeId, hp, attack, defense, frontURL, backURL) {
+    constructor(name, pokeId, hp, attack, defense, frontURL, backURL, addOrder) {
         this.name = name;
         this.pokeId = pokeId;
         this.hp = hp;
@@ -12,19 +12,19 @@ class Pokemon {
         this.defense = defense;
         this.frontURL = frontURL;
         this.backURL = backURL;
-        // this.order = order;
+        this.addOrder = addOrder;
         this.ability = [];
     }
 }
 
 class Trainer {
-    constructor(trainerName, trainerPokemon) {
+    constructor(trainerName) {
         this.trainerName = trainerName;
         this.trainerPokemon = {}
         this.pokeCount = 0;
     }
     all() {
-        console.log(Object.keys(this.trainerPokemon))
+        console.log(Object.values(this.trainerPokemon))
     }
     get(name) {
         console.log(this.trainerPokemon[name]);
@@ -41,7 +41,7 @@ class Trainer {
             let pokeBackURL = pokedata.sprites.back_default
                 // console.log(pokemonNumber)
 
-            let pokemonObject = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL)
+            let pokemonObject = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL, this.pokeCount)
             pokedata.abilities.forEach(element => {
                 pokemonObject.ability.push((element.ability.name))
             });
@@ -55,11 +55,52 @@ class Trainer {
 }
 
 let shahid = new Trainer("shahid")
-shahid.add(150)
+    // shahid.add(150)
     // shahid.get("mewtwo")
-shahid.add(129)
+    // shahid.add(129)
     // shahid.get("magikarp")
-shahid.add(126)
+    // shahid.add(126)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

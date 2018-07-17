@@ -20,7 +20,7 @@ class Pokemon {
 class Trainer {
     constructor(trainerName) {
         this.trainerName = trainerName;
-        this.trainerPokemon = {}
+        this.trainerPokemon = {};
         this.pokeCount = 0;
     }
     all() {
@@ -45,6 +45,7 @@ class Trainer {
             pokedata.abilities.forEach(element => {
                 pokemonObject.ability.push((element.ability.name))
             });
+
             this.trainerPokemon[pokemonObject.name] = pokemonObject;
             this.pokeCount++
                 // console.log(pokemonObject);
@@ -55,11 +56,11 @@ class Trainer {
 }
 
 let shahid = new Trainer("shahid")
-    // shahid.add(150)
-    // shahid.get("mewtwo")
-    // shahid.add(129)
-    // shahid.get("magikarp")
-    // shahid.add(126)
+shahid.add(150)
+shahid.get("mewtwo")
+shahid.add(129)
+shahid.get("magikarp")
+shahid.add(126)
 
 
 

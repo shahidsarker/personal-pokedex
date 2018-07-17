@@ -17,4 +17,88 @@ $ghost-type:#705898;
 $dark-type:#705848;
 $steel-type:#B8B8D0;
 $fairy-type:#EE99AC;
-$question-type: #FFFFFF;
+///////////
+.pokemon {
+    .normal-type {
+        background-color: $normal-type;
+    }
+    .fire-type {
+        background-color: $fire-type;
+    }
+    .fighting-type {
+        background-color: $fighting-type;
+    }
+    .water-type {
+        background-color: $water-type;
+    }
+    .flying-type {
+        background-color: $flying-type;
+    }
+    .grass-type {
+        background-color: $grass-type;
+    }
+    .poison-type {
+        background-color: $poison-type;
+    }
+    .electric-type {
+        background-color: $electric-type;
+    }
+    .ground-type {
+        background-color: $ground-type;
+    }
+    .psychic-type {
+        background-color: $psychic-type;
+    }
+    .rock-type {
+        background-color: $rock-type;
+    }
+    .ice-type {
+        background-color: $ice-type;
+    }
+    .bug-type {
+        background-color: $bug-type;
+    }
+    .dragon-type {
+        background-color: $dragon-type;
+    }
+    .ghost-type {
+        background-color: $ghost-type;
+    }
+    .dark-type {
+        background-color: $dark-type;
+    }
+    .steel-type {
+        background-color: $steel-type;
+    }
+    .fairy-type {
+        background-color: $fairy-type;
+    }
+    ul {
+        list-style-type: none;
+    }
+}
+
+#container {
+    border: 1px solid black;
+    #primary {
+        border: 1px solid green;
+    }
+    #secondary {
+        // float: right;
+        position: fixed;
+        right: 100px;
+        top: 5%;
+        button {
+            border: 1px solid $normal-type;
+            // background-color: $normal-type;
+            border-radius: 12px;
+            margin: 5px;
+            font-size: 1.5em;
+            box-shadow: 1px 1px 5px black;
+        }
+    }
+}
+
+#pokemon-front-sprite {
+    border: 1px solid black;
+}

@@ -26,9 +26,10 @@ class Trainer {
     constructor(trainerName) {
         this.trainerName = trainerName;
         this.trainerPokemon = {};
+        this.pokemonArray = [];
         this.pokeCount = 0;
     }
-    all() {
+    all(num) {
         // console.log(Object.values(this.trainerPokemon))
         return Object.values(this.trainerPokemon)
     }
@@ -72,12 +73,12 @@ class Trainer {
     }
 }
 
-let shahid = new Trainer("shahid")
-shahid.add(150)
-    // shahid.get("mewtwo")
-shahid.add(129)
-    // shahid.get("magikarp")
-shahid.add(126)
+// let shahid = new Trainer("shahid")
+// shahid.add(150)
+//     // shahid.get("mewtwo")
+// shahid.add(129)
+//     // shahid.get("magikarp")
+// shahid.add(126)
 
 
 

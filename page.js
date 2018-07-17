@@ -1,0 +1,6 @@
+let shahid = new Trainer("shahid")
+shahid.add(150)
+    // shahid.get("mewtwo")
+shahid.add(129)
+    // shahid.get("magikarp")
+shahid.add(126)

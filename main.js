@@ -29,16 +29,18 @@ class Trainer {
         this.pokeCount = 0;
     }
     all() {
-        console.log(Object.values(this.trainerPokemon))
+        // console.log(Object.values(this.trainerPokemon))
+        return Object.values(this.trainerPokemon)
     }
     get(name) {
-        console.log(this.trainerPokemon[name]);
+        // console.log(this.trainerPokemon[name]);
+        return this.trainerPokemon[name]
     }
     add(id) {
         // axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
         axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${id}.json`).then((response) => {
             let pokedata = response.data
-            console.log(pokedata)
+                // console.log(pokedata)
             let pokeName = pokedata.name;
             let pokeId = pokedata.id;
             let pokeHp = pokedata.stats[5].base_stat;
@@ -47,8 +49,7 @@ class Trainer {
             let pokeFrontURL = pokedata.sprites.front_default
             let pokeBackURL = pokedata.sprites.back_default
             let pokeTypesArray = pokedata.types;
-            console.log(pokeName + "")
-            console.log(pokeTypesArray)
+            console.log(pokeTypesArray[0].type.name)
 
             let pokemonObject = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL, this.pokeCount)
                 // pushes abilities to pokemonObject
@@ -73,9 +74,9 @@ class Trainer {
 
 let shahid = new Trainer("shahid")
 shahid.add(150)
-shahid.get("mewtwo")
+    // shahid.get("mewtwo")
 shahid.add(129)
-shahid.get("magikarp")
+    // shahid.get("magikarp")
 shahid.add(126)
 
 

@@ -2,6 +2,10 @@ String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
+String.prototype.toProperCase = function() {
+    return this.replace(/\w\S*/g, function(txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+};
+
 
 class Pokemon {
     constructor(name, pokeId, hp, attack, defense, frontURL, backURL, addOrder) {
@@ -14,6 +18,7 @@ class Pokemon {
         this.backURL = backURL;
         this.addOrder = addOrder;
         this.ability = [];
+        this.types = [];
     }
 }
 
@@ -30,8 +35,10 @@ class Trainer {
         console.log(this.trainerPokemon[name]);
     }
     add(id) {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
+        // axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
+        axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${id}.json`).then((response) => {
             let pokedata = response.data
+            console.log(pokedata)
             let pokeName = pokedata.name;
             let pokeId = pokedata.id;
             let pokeHp = pokedata.stats[5].base_stat;
@@ -39,11 +46,20 @@ class Trainer {
             let pokeDef = pokedata.stats[3].base_stat;
             let pokeFrontURL = pokedata.sprites.front_default
             let pokeBackURL = pokedata.sprites.back_default
-                // console.log(pokemonNumber)
+            let pokeTypesArray = pokedata.types;
+            console.log(pokeName + "")
+            console.log(pokeTypesArray)
 
             let pokemonObject = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL, this.pokeCount)
+                // pushes abilities to pokemonObject
             pokedata.abilities.forEach(element => {
                 pokemonObject.ability.push((element.ability.name))
+                    // get rid of dash and capitalize:
+                    // pokemonObject.ability.push((element.ability.name).split('-').join(' ').toProperCase())
+            });
+
+            pokeTypesArray.forEach(element => {
+                pokemonObject.types.push((element.type.name))
             });
 
             this.trainerPokemon[pokemonObject.name] = pokemonObject;

@@ -84,4 +84,9 @@ div.secondary {
   margin-top: 5%;
   margin-bottom: 5%; }
 
+.statbar {
+  background-color: lightgray;
+  padding: 0;
+  border-radius: 1rem; }
+
 /*# sourceMappingURL=main.css.map */

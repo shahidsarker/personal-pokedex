@@ -27,9 +27,9 @@
                     </div>
                     <div class="col-12 text-center"><img class="pokemon-front" id="pokemon-front-sprite" src="media/Missingno_RB.png"></div>
                 </div>
-                <dl class="row pokemon">
+                <!-- <dl class="row pokemon">
                     <dt class="col-5 text-right">HP</dt>
-                    <dd class="col-7" id="pokemon-hp">33<span id="bar-hp" style="height:5px; width:33px; background-color:blue;"></span></dd>
+                    <dd class="col-7" id="pokemon-hp">33</dd>
 
                     <dt class="col-5 text-right">Attack</dt>
                     <dd class="col-7" id="pokemon-attack">136<span id="bar-attack"></span></dd>
@@ -43,7 +43,43 @@
                     <dt class="col-5 text-right">Type</dt>
                     <dd class="col-7 text-capitalize" id="pokemon-type"><span class="normal-type badge badge-primary">normal</span></dd>
 
-                </dl>
+                </dl> -->
+                <div class="row pokemon">
+                    <div class="col-4 text-right">HP</div>
+                    <div class="col-2" id="pokemon-hp">33</div>
+                    <div class="col-5 statbar">
+                        <div id="bar-hp" class="statbar-stat" style="width:13%;background-color:pink;border-top-left-radius: 1rem;border-bottom-left-radius: 1rem;">33</div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-4 text-right">Attack</div>
+                    <div class="col-2" id="pokemon-attack">136</div>
+                    <div class="col-5 statbar">
+                        <div id="bar-attack" class="statbar-stat" style="width:72%;background-color:cornflowerblue;border-top-left-radius: 1rem;border-bottom-left-radius: 1rem;">&nbsp;</div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-4 text-right">Defense</div>
+                    <div class="col-2" id="pokemon-defense">0 </div>
+                    <!-- <div class="col-6"><span id="" style=""></span></div> -->
+                    <div class="col-5 statbar">
+                        <div id="bar-defense" class="statbar-stat" style="width:45%;background-color:cornflowerblue;border-top-left-radius: 1rem;border-bottom-left-radius: 1rem;">&nbsp;</div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-4 text-right">Abilities</div>
+                    <div class="col-8 text-capitalize" id="pokemon-abilities">None</div>
+                    <!-- <div class="col-6"></div> -->
+
+
+                    <div class="col-4 text-right">Type</div>
+                    <div class="col-8 text-capitalize" id="pokemon-type">
+                        <span class="normal-type badge badge-primary">normal</span>
+                    </div>
+                    <!-- <div class="col-6"></div> -->
+
+                </div>
+
             </div>
             <div class="col-4 secondary text-center">
                 <!-- <h6 class="h5" id="pokemon-menu-title">Pokémon</h6> -->

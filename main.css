@@ -42,12 +42,12 @@ div.row.main {
 
 div.header {
   background-color: #ee1515;
-  padding-left: 15px;
   margin-top: 20px;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem; }
   div.header h1 {
-    color: #f0f0f0; }
+    color: #f0f0f0;
+    margin: 2%; }
 
 div.footer {
   background-color: #f0f0f0;

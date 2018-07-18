@@ -78,12 +78,13 @@ div.row.main {
 
 div.header {
     background-color: $redtop;
-    padding-left: 15px;
+    // padding-left: 15px;
     margin-top: 20px;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     h1 {
         color: $ballwhitebottom;
+        margin: 2%;
     }
 }
 

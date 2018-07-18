@@ -1,4 +1,5 @@
 let shahid = new Trainer("shahid")
+
 shahid.add(150)
 shahid.add(129)
 shahid.add(126)

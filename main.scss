@@ -1,22 +1,3 @@
-// // pokemon type colors:
-// $normal-type: #A8A878;
-// $fire-type:#F08030;
-// $fighting-type:#C03028;
-// $water-type:#6890F0;
-// $flying-type:#A890F0;
-// $grass-type:#78C850;
-// $poison-type:#A040A0;
-// $electric-type:#F8D030;
-// $ground-type:#E0C068;
-// $psychic-type:#F85888;
-// $rock-type:#B8A038;
-// $ice-type:#98D8D8;
-// $bug-type:#A8B820;
-// $dragon-type:#7038F8;
-// $ghost-type:#705898;
-// $dark-type:#705848;
-// $steel-type:#B8B8D0;
-// $fairy-type:#EE99AC;
 // ///////////
 @import 'colors';
 //
@@ -80,6 +61,20 @@
     // }
 }
 
+div.row.main {
+    // justify-content: center;
+    * {
+        border: 1px solid black;
+    }
+}
+
+div.header {
+    background-color: $redtop;
+    h1 {
+        color: $ballwhitebottom;
+    }
+}
+
 // .container {
 //     border: 1px solid black;
 //     #primary {
@@ -103,10 +98,3 @@
 // #pokemon-front-sprite {
 //     border: 1px solid black;
 // }
-div.row.main {
-    justify-content: center;
-}
-
-div.row.main * {
-    border: 1px solid black;
-}

@@ -49,11 +49,11 @@ div.header {
 div.footer {
   background-color: #f0f0f0;
   border: solid #ee1515;
-  border-width: 0 15px 15px 15px; }
+  border-width: 15px 15px 15px 15px; }
 
 img.pokemon-front {
-  background-color: lightgreen;
-  border: 1px solid black;
+  background-color: #DAE5EA;
+  border: 1px solid #222224;
   padding: 15px; }
 
 body {

@@ -27,7 +27,7 @@ let loadPokemon = (trainer, pokemonIndex) => {
     pokeImg.setAttribute("src", trainer.all()[pokemonIndex].frontURL)
 
     let pokeabilities = document.getElementById("pokemon-abilities")
-    pokeabilities.innerText = `${ trainer.all()[pokemonIndex].ability[0].split('-').join(' ').toProperCase() }, ${ trainer.all()[pokemonIndex].ability[1].split('-').join(' ').toProperCase()}`
+    pokeabilities.innerText = `${ trainer.all()[pokemonIndex].ability[0].split('-').join(' ').toProperCase() }, ${ trainer.all()[pokemonIndex].ability[1].split('-').join(' ')}`
 
     let pokeType = document.getElementById("pokemon-type")
         // pokeType.innerText = `${ trainer.all()[pokemonIndex].types[0]}`

@@ -63,9 +63,9 @@
 
 div.row.main {
     // justify-content: center;
-    * {
-        border: 1px solid black;
-    }
+    // * {
+    //     border: 1px solid black;
+    // }
 }
 
 div.header {
@@ -73,6 +73,10 @@ div.header {
     h1 {
         color: $ballwhitebottom;
     }
+}
+
+div.footer {
+    background-color: $ballwhitemid;
 }
 
 // .container {

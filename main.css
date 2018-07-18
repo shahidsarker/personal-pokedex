@@ -35,12 +35,12 @@
 .pokemon .fairy-type {
   background-color: #EE99AC; }
 
-div.row.main * {
-  border: 1px solid black; }
-
 div.header {
   background-color: #ee1515; }
   div.header h1 {
     color: #f0f0f0; }
+
+div.footer {
+  background-color: #f0f0f0; }
 
 /*# sourceMappingURL=main.css.map */

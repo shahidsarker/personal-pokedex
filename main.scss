@@ -74,6 +74,7 @@ div.row.main {
 div.header {
     background-color: $redtop;
     padding-left: 15px;
+    margin-top: 20px;
     h1 {
         color: $ballwhitebottom;
     }
@@ -118,6 +119,8 @@ img.pokemon-front {
     background-color: #DAE5EA;
     border: 1px solid $ballbutton;
     padding: 15px;
+    margin: 10px;
+    width: 200px;
 }
 
 body {

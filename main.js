@@ -40,8 +40,8 @@ class Trainer {
         return this.trainerPokemon[name]
     }
     add(id) {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
-            // axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${id}.json`).then((response) => {
+        // axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
+        axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${id}.json`).then((response) => {
             let pokedata = response.data
                 // console.log(pokedata)
             let pokeName = pokedata.name;
@@ -67,11 +67,13 @@ class Trainer {
             });
 
             this.trainerPokemon[pokemonObject.name] = pokemonObject;
-            let menuLink = document.createElement("button")
+            let menuLink = document.createElement("li")
             menuLink.innerText = `${pokeName.capitalize()}`
             menuLink.setAttribute("onclick", `loadPokemon(${this.trainerName}, ${this.pokeCount})`)
                 // menuLink.classList.add("bounce")
-            menuLink.setAttribute("class", `${pokemonObject.types[0].type}-type `)
+            menuLink.setAttribute("class", `btn btn-block btn-outline-danger`)
+                // < li class="btn btn-block btn-outline-danger" > Pokemon A</li >
+                // menuLink.setAttribute("class", `${pokemonObject.types[0].type}-type `)
             pokeMenu.appendChild(menuLink)
 
             this.pokeCount++

@@ -68,7 +68,9 @@ body {
   background-image: url("media/Grass_Type.jpg"); }
 
 div.primary {
-  background: #f0f0f0; }
+  background: #f0f0f0;
+  margin-top: 2%;
+  margin-bottom: 2%; }
 
 div.secondary {
   background: #91B1C1;
@@ -77,5 +79,9 @@ div.secondary {
 
 .btn-outline-danger {
   background: #FBECEE; }
+
+#pokemon-menu {
+  margin-top: 5%;
+  margin-bottom: 5%; }
 
 /*# sourceMappingURL=main.css.map */

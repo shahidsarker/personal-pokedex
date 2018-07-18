@@ -33,7 +33,7 @@ let loadPokemon = (trainer, pokemonIndex) => {
         // pokeType.innerText = `${ trainer.all()[pokemonIndex].types[0]}`
         //     // pokeType.setAttribute("class", `${trainer.all()[pokemonIndex].types[0]}-type`)
 
-    pokeType.innerHTML = `<span class="badge badge-primary ${trainer.all()[pokemonIndex].types[0]}-type">&nbsp;${trainer.all()[pokemonIndex].types[0]}&nbsp;</span>`
+    pokeType.innerHTML = `<span class="badge badge-primary ${trainer.all()[pokemonIndex].types[0]}-type">${trainer.all()[pokemonIndex].types[0]}</span>`
         // pokeType.setAttribute("class", `${trainer.all()[pokemonIndex].types[0]}-type`)
 
 }

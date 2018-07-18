@@ -43,21 +43,26 @@ div.row.main {
 div.header {
   background-color: #ee1515;
   padding-left: 15px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem; }
   div.header h1 {
     color: #f0f0f0; }
 
 div.footer {
   background-color: #f0f0f0;
   border: solid #ee1515;
-  border-width: 15px 15px 15px 15px; }
+  border-width: 15px 15px 15px 15px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem; }
 
 img.pokemon-front {
   background-color: #DAE5EA;
   border: 1px solid #222224;
   padding: 15px;
   margin: 10px;
-  width: 200px; }
+  width: 200px;
+  border-radius: 1rem; }
 
 body {
   background-image: url("media/Grass_Type.jpg"); }
@@ -69,5 +74,8 @@ div.secondary {
   background: #91B1C1;
   border: #ee1515 solid;
   border-width: 0 0 0 15px; }
+
+.btn-outline-danger {
+  background: #FBECEE; }
 
 /*# sourceMappingURL=main.css.map */

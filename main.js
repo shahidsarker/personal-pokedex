@@ -40,8 +40,8 @@ class Trainer {
         return this.trainerPokemon[name]
     }
     add(id) {
-        axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
-            // axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${id}.json`).then((response) => {
+        // axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
+        axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${id}.json`).then((response) => {
             let pokedata = response.data
                 // console.log(pokedata)
             let pokeName = pokedata.name;

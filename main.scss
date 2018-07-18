@@ -2,6 +2,11 @@
 @import 'colors';
 //
 .pokemon {
+    #pokemon-type {
+        // border: solid 1px;
+        // border-radius: 50%;
+        // color: $ballbutton;
+    }
     .normal-type {
         background-color: $normal-type;
     }
@@ -75,6 +80,8 @@ div.header {
     background-color: $redtop;
     padding-left: 15px;
     margin-top: 20px;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
     h1 {
         color: $ballwhitebottom;
     }
@@ -84,6 +91,9 @@ div.footer {
     background-color: $ballwhitemid;
     border: solid $redtop;
     border-width: 15px 15px 15px 15px;
+    // bottom-border-radius: .25rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
 }
 
 // .container {
@@ -121,6 +131,7 @@ img.pokemon-front {
     padding: 15px;
     margin: 10px;
     width: 200px;
+    border-radius: 1rem;
 }
 
 body {
@@ -135,4 +146,8 @@ div.secondary {
     background: #91B1C1;
     border: $redtop solid;
     border-width: 0 0 0 15px;
+}
+
+.btn-outline-danger {
+    background: #FBECEE;
 }

@@ -71,7 +71,7 @@ class Trainer {
             menuLink.innerText = `${pokeName.capitalize()}`
             menuLink.setAttribute("onclick", `loadPokemon(${this.trainerName}, ${this.pokeCount})`)
                 // menuLink.classList.add("bounce")
-            menuLink.setAttribute("class", `${pokemonObject.types[0].type}-type`)
+            menuLink.setAttribute("class", `${pokemonObject.types[0].type}-type `)
             pokeMenu.appendChild(menuLink)
 
             this.pokeCount++

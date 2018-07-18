@@ -34,25 +34,37 @@
   background-color: #B8B8D0; }
 .pokemon .fairy-type {
   background-color: #EE99AC; }
-.pokemon ul {
-  list-style-type: none; }
 
-#container {
-  border: 1px solid black; }
-  #container #primary {
-    border: 1px solid green; }
-  #container #secondary {
-    position: fixed;
-    right: 100px;
-    top: 5%; }
-    #container #secondary button {
-      border: 1px solid #A8A878;
-      border-radius: 12px;
-      margin: 5px;
-      font-size: 1.5em;
-      box-shadow: 1px 1px 5px black; }
+div.row.main {
+  border: solid #ee1515;
+  border-width: 0 15px;
+  background: #f0f0f0; }
 
-#pokemon-front-sprite {
-  border: 1px solid black; }
+div.header {
+  background-color: #ee1515;
+  padding-left: 15px; }
+  div.header h1 {
+    color: #f0f0f0; }
+
+div.footer {
+  background-color: #f0f0f0;
+  border: solid #ee1515;
+  border-width: 15px 15px 15px 15px; }
+
+img.pokemon-front {
+  background-color: #DAE5EA;
+  border: 1px solid #222224;
+  padding: 15px; }
+
+body {
+  background-image: url("media/Grass_Type.jpg"); }
+
+div.primary {
+  background: #f0f0f0; }
+
+div.secondary {
+  background: #91B1C1;
+  border: #ee1515 solid;
+  border-width: 0 0 0 15px; }
 
 /*# sourceMappingURL=main.css.map */

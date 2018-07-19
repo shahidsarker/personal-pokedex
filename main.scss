@@ -3,16 +3,12 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis:400|Fredoka+One');
 // font-family: 'Dosis', sans-serif;
 // font-family: 'Fredoka One', cursive;
-
 $corner-radius: 1rem;
-
-
 div.row.main {
     border: solid $redtop;
     border-width: 0 1rem;
     background: $ballwhitemid;
 }
-
 
 body {
     background: #11998e;
@@ -26,7 +22,6 @@ body {
             color: white;
             margin: 2%;
             font-family: 'Fredoka One', cursive;
-            
         }
     }
     div.primary {
@@ -34,36 +29,30 @@ body {
         margin-top: 2%;
         margin-bottom: 2%;
     }
-
     div.secondary {
         background: #91B1C1;
         border: $redtop solid;
         border-width: 0 0 0 15px;
     }
-    
-
     div.footer {
         background-color: $ballwhitemid;
         margin-bottom: 2.5%;
         border: solid $redtop;
-        border-width: 1rem; 
+        border-width: 1rem;
         border-bottom-left-radius: $corner-radius;
         border-bottom-right-radius: $corner-radius;
     }
 }
 
-    .btn-outline-success {
-        background: $button-bkgrnd;
-    }
-
-
+.btn-outline-success {
+    background: $button-bkgrnd;
+}
 
 #pokemon-menu {
     margin-top: 5%;
     margin-bottom: 5%;
     font-family: 'Dosis', sans-serif;
     letter-spacing: .1rem;
-
 }
 
 .statbar {
@@ -78,11 +67,9 @@ body {
     #bar-attack {
         background-color: $attack-bar;
     }
-
     #bar-defense {
         background-color: $defense-bar;
     }
-
     #bar-hp {
         background-color: $hp-bar;
     }

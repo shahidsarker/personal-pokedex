@@ -6,8 +6,9 @@ shahid.add(126)
     //
 
 
-let loadPokemon = (trainer, pokemonIndex) => {
 
+
+let loadPokemon = (trainer, pokemonIndex) => {
 
     let pokename = document.getElementById("pokemon-name")
     pokename.innerText = trainer.all()[pokemonIndex].name.capitalize()
@@ -17,12 +18,18 @@ let loadPokemon = (trainer, pokemonIndex) => {
 
     let pokeHp = document.getElementById("pokemon-hp")
     pokeHp.innerText = `${trainer.all()[pokemonIndex].hp}`
+    let hpStatBar = document.getElementById("bar-hp")
+    hpStatBar.setAttribute("style", `width:${(trainer.all()[pokemonIndex].hp/255)*100}%;`)
 
     let pokeAttack = document.getElementById("pokemon-attack")
     pokeAttack.innerText = `${trainer.all()[pokemonIndex].attack}`
+    let attackStatBar = document.getElementById("bar-attack")
+    attackStatBar.setAttribute("style", `width:${(trainer.all()[pokemonIndex].attack / 190) * 100}%;`)
 
     let pokeDef = document.getElementById("pokemon-defense")
     pokeDef.innerText = `${trainer.all()[pokemonIndex].defense}`
+    let defenseStatBar = document.getElementById("bar-defense")
+    defenseStatBar.setAttribute("style", `width:${(trainer.all()[pokemonIndex].defense / 230) * 100}%;`)
 
     let pokeImg = document.getElementById("pokemon-front-sprite")
     pokeImg.setAttribute("src", trainer.all()[pokemonIndex].frontURL)
@@ -31,41 +38,6 @@ let loadPokemon = (trainer, pokemonIndex) => {
     pokeabilities.innerText = `${ trainer.all()[pokemonIndex].ability[0].split('-').join(' ').toProperCase() }, ${ trainer.all()[pokemonIndex].ability[1].split('-').join(' ')}`
 
     let pokeType = document.getElementById("pokemon-type")
-        // pokeType.innerText = `${ trainer.all()[pokemonIndex].types[0]}`
-        //     // pokeType.setAttribute("class", `${trainer.all()[pokemonIndex].types[0]}-type`)
-
     pokeType.innerHTML = `<span class="badge badge-primary ${trainer.all()[pokemonIndex].types[0]}-type">${trainer.all()[pokemonIndex].types[0]}</span>`
-        // pokeType.setAttribute("class", `${trainer.all()[pokemonIndex].types[0]}-type`)
 
 }
-
-
-// let loadPokemon = (trainer, pokemonIndex) => {
-
-
-//     let pokename = document.getElementById("pokemon-name")
-//     pokename.innerText = trainer.all()[pokemonIndex].name.capitalize()
-
-//     let pokeid = document.getElementById("pokemon-id")
-//     pokeid.innerText = trainer.all()[pokemonIndex].pokeId
-
-//     let pokeHp = document.getElementById("pokemon-hp")
-//     pokeHp.innerText = `HP: ${trainer.all()[pokemonIndex].hp}`
-
-//     let pokeAttack = document.getElementById("pokemon-attack")
-//     pokeAttack.innerText = `Attack: ${trainer.all()[pokemonIndex].attack}`
-
-//     let pokeDef = document.getElementById("pokemon-defense")
-//     pokeDef.innerText = `Defense: ${trainer.all()[pokemonIndex].attack}`
-
-//     let pokeImg = document.getElementById("pokemon-front-sprite")
-//     pokeImg.setAttribute("src", trainer.all()[pokemonIndex].frontURL)
-
-//     let pokeabilities = document.getElementById("pokemon-abilities")
-//     pokeabilities.innerText = `Abilities: ${trainer.all()[pokemonIndex].ability[0].split('-').join(' ').toProperCase()}, ${trainer.all()[pokemonIndex].ability[1].split('-').join(' ').toProperCase()}`
-
-//     let pokeType = document.getElementById("pokemon-type")
-//     pokeType.innerText = `${trainer.all()[pokemonIndex].types[0].capitalize()}`
-//     pokeType.setAttribute("class", `${trainer.all()[pokemonIndex].types[0]}-type`)
-
-// }

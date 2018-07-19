@@ -85,6 +85,7 @@ div.header {
     h1 {
         color: $ballwhitebottom;
         margin: 2%;
+        // font-weight: bold;
     }
 }
 
@@ -166,4 +167,25 @@ div.secondary {
     border-radius: 1rem;
 }
 
-.statbar-stat {}
+.statbar-stat {
+    // background-color: cornflowerblue;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    text-align: center;
+}
+
+#bar-attack {
+    background-color: cornflowerblue;
+}
+
+#bar-defense {
+    background-color: pink;
+}
+
+#bar-hp {
+    background-color: green;
+}
+
+.poke-info {
+    font-weight: bold;
+}

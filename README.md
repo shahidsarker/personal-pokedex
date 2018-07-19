@@ -21,7 +21,7 @@ These instructions will get you a copy of the project up and running on your loc
 - Have a Pokemon Class which will be able to create instances of Pokemon with several properties
 - Have a Trainer Class which will have a container object to store Pokemon objects
     - have a method named `all()` which returns an array of Pokemon objects
-    - have a method named `get()` which accepts a `name` and returns a Pokemon object housing information for the Pokémon
+    - have a method named `get()` which accepts a `name` and returns a Pokemon object
     - have a method named `add()` which adds it to the trainer's container object for all their Pokémon
 - retrieve Pokémon information via the Pokéapi
 - retrieve information using Javascript AJAX calls

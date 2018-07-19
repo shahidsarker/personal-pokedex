@@ -1,18 +1,21 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400|Fredoka+One");
 div.row.main {
   border: solid #ee1515;
   border-width: 0 15px;
   background: #f0f0f0; }
 
 body {
-  background-image: url("media/Grass_Type.jpg"); }
+  background: #00F260;
+  background: linear-gradient(to right, #11998e, #38ef7d); }
   body div.header {
     background-color: #ee1515;
-    margin-top: 20px;
+    margin-top: 2.5%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem; }
     body div.header h1 {
-      color: #f0f0f0;
-      margin: 2%; }
+      color: white;
+      margin: 2%;
+      font-family: 'Fredoka One', cursive; }
   body div.primary {
     background: #f0f0f0;
     margin-top: 2%;
@@ -23,39 +26,35 @@ body {
     border-width: 0 0 0 15px; }
   body div.footer {
     background-color: #f0f0f0;
+    margin-bottom: 2.5%;
     border: solid #ee1515;
     border-width: 15px 15px 15px 15px;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem; }
 
 .btn-outline-success {
-  background: #FBECEE; }
+  background: white; }
 
 #pokemon-menu {
   margin-top: 5%;
-  margin-bottom: 5%; }
+  margin-bottom: 5%;
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: .1rem; }
 
 .statbar {
   background-color: lightgray;
   padding: 0;
   border-radius: 1rem; }
-
-.statbar-stat {
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  text-align: center; }
-
-#bar-attack {
-  background-color: cornflowerblue; }
-
-#bar-defense {
-  background-color: pink; }
-
-#bar-hp {
-  background-color: green; }
-
-.poke-info {
-  font-weight: bold; }
+  .statbar .statbar-stat {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    text-align: center; }
+  .statbar #bar-attack {
+    background-color: #256EFF; }
+  .statbar #bar-defense {
+    background-color: #FFD166; }
+  .statbar #bar-hp {
+    background-color: #06C392; }
 
 .pokemon .pokemon-front {
   background-color: #DAE5EA;
@@ -64,6 +63,8 @@ body {
   margin: 10px;
   width: 200px;
   border-radius: 1rem; }
+.pokemon .poke-info {
+  font-weight: bold; }
 .pokemon .normal-type {
   background-color: #A8A878; }
 .pokemon .fire-type {

@@ -1,6 +1,11 @@
 // ///////////
 @import 'colors';
+@import url('https://fonts.googleapis.com/css?family=Dosis:400|Fredoka+One');
+// font-family: 'Dosis', sans-serif;
+// font-family: 'Fredoka One', cursive;
 //
+
+$corner-radius: 1rem;
 
 
 div.row.main {
@@ -11,15 +16,18 @@ div.row.main {
 
 
 body {
-    background-image: url('media/Grass_Type.jpg');
+    background: #00F260;
+    background: linear-gradient(to right, #11998e, #38ef7d);
     div.header {
         background-color: $redtop;
-        margin-top: 20px;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
+        margin-top: 2.5%;
+        border-top-left-radius: $corner-radius;
+        border-top-right-radius: $corner-radius;
         h1 {
-            color: $ballwhitebottom;
+            color: white;
             margin: 2%;
+            font-family: 'Fredoka One', cursive;
+            
         }
     }
     div.primary {
@@ -37,52 +45,55 @@ body {
 
     div.footer {
         background-color: $ballwhitemid;
+        margin-bottom: 2.5%;
         border: solid $redtop;
-        border-width: 15px 15px 15px 15px; // bottom-border-radius: .25rem;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
+        border-width: 15px 15px 15px 15px; 
+        border-bottom-left-radius: $corner-radius;
+        border-bottom-right-radius: $corner-radius;
     }
 }
 
+    .btn-outline-success {
+        background: $button-bkgrnd;
+    }
 
-.btn-outline-success {
-    background: #FBECEE;
-}
 
 
 #pokemon-menu {
     margin-top: 5%;
     margin-bottom: 5%;
-    
+    font-family: 'Dosis', sans-serif;
+    letter-spacing: .1rem;
+
 }
 
 .statbar {
     background-color: lightgray;
     padding: 0;
-    border-radius: 1rem;
+    border-radius: $corner-radius;
+    .statbar-stat {
+        border-top-left-radius: $corner-radius;
+        border-bottom-left-radius: $corner-radius;
+        text-align: center;
+    }
+    #bar-attack {
+        background-color: $attack-bar;
+    }
+
+    #bar-defense {
+        background-color: $defense-bar;
+    }
+
+    #bar-hp {
+        background-color: $hp-bar;
+    }
 }
 
-.statbar-stat {
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    text-align: center;
-}
 
-#bar-attack {
-    background-color: cornflowerblue;
-}
 
-#bar-defense {
-    background-color: pink;
-}
 
-#bar-hp {
-    background-color: green;
-}
 
-.poke-info {
-    font-weight: bold;
-}
+
 
 .pokemon {
     .pokemon-front {
@@ -91,7 +102,10 @@ body {
         padding: 15px;
         margin: 10px;
         width: 200px;
-        border-radius: 1rem;
+        border-radius: $corner-radius;
+    }
+    .poke-info {
+        font-weight: bold;
     }
     .normal-type {
         background-color: $normal-type;

@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Pokédex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+        crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 
 </head>
@@ -18,32 +18,17 @@
             <h1 class="display-3">Pokédex</h1>
         </div>
         <div class="row main">
-            <div class="col-8 primary">
+            <div class="col-8 primary ">
                 <div class="row">
                     <div class="col-12 text-center">
                         <h2 class="pokemon-name h2 " id="pokemon-name">MissingNo. </h2>
                         <small class="h4 text-muted" id="pokemon-id"># 000</small>
                     </div>
-                    <div class="col-12 text-center"><img class="pokemon-front" id="pokemon-front-sprite" src="media/Missingno_RB.png"></div>
+                    <div class="col-12 text-center">
+                        <img class="pokemon-front" id="pokemon-front-sprite" src="media/Missingno_RB.png">
+                    </div>
                 </div>
-                <!-- without bars
-                    <dl class="row pokemon">
-                    <dt class="col-5 text-right">HP</dt>
-                    <dd class="col-7" id="pokemon-hp">33</dd>
 
-                    <dt class="col-5 text-right">Attack</dt>
-                    <dd class="col-7" id="pokemon-attack">136<span id="bar-attack"></span></dd>
-
-                    <dt class="col-5 text-right">Defense</dt>
-                    <dd class="col-7" id="pokemon-defense">0<span id="bar-defense"></span></dd>
-
-                    <dt class="col-5 text-right">Abilities</dt>
-                    <dd class="col-7 text-capitalize" id="pokemon-abilities">None</dd>
-
-                    <dt class="col-5 text-right">Type</dt>
-                    <dd class="col-7 text-capitalize" id="pokemon-type"><span class="normal-type badge badge-primary">normal</span></dd>
-
-                </dl> -->
                 <div class="row pokemon">
                     <div class="col-4 text-right poke-info">HP</div>
                     <div class="col-2 text-center" id="pokemon-hp">33</div>
@@ -79,13 +64,11 @@
 
             </div>
             <div class="col-4 secondary text-center">
-                <!-- <h6 class="h5" id="pokemon-menu-title">Pokémon</h6> -->
 
                 <ul class="list-unstyled" id="pokemon-menu">
                 </ul>
 
             </div>
-            <!-- <div class="col-2"></div> -->
         </div>
         <div class="row footer text-right">
 
@@ -96,36 +79,13 @@
 
 
 
-
-    <!-- Code without Bootstrap -->
-    <!-- <div class="container">
-        <div id="primary" class="row">
-            <div class="pokemon col">
-                <img id="pokemon-front-sprite" src="media/Missingno_RB96.png">
-                <div class="col-3">
-                    <h1 id="pokemon-name">MissingNo.</h1>
-                    <h4 id="pokemon-id">000</h4>
-                    <ul>
-                        <li id="pokemon-hp">HP: 33</li>
-                        <li id="pokemon-attack">Attack: 136</li>
-                        <li id="pokemon-defense">Defense: 0</li>
-                        <li id="pokemon-abilities">Abilities: None</li>
-                        <li id="pokemon-type">Normal</li>
-
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div id="secondary" class="row">
-            <div id="pokemon-menu">
-            </div>
-        </div>
-    </div> -->
-
     <!-- scripts for page -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js"></script>
     <script src="page.js"></script>

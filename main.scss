@@ -2,6 +2,7 @@
 @import 'colors';
 //
 .pokemon {
+    
     .normal-type {
         background-color: $normal-type;
     }
@@ -64,8 +65,6 @@ div.row.main {
     background: $ballwhitemid;
 }
 
-
-
 img.pokemon-front {
     background-color: #DAE5EA;
     border: 1px solid $ballbutton;
@@ -74,6 +73,8 @@ img.pokemon-front {
     width: 200px;
     border-radius: 1rem;
 }
+
+
 
 body {
     background-image: url('media/Grass_Type.jpg');

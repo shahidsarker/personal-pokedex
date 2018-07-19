@@ -1,18 +1,48 @@
 # Personal Pokedex
 
 A personal Pokédex created during the NYCDA Web Development Fellowship. The exercise requires creating a webpage to display three Pokémon characters belonging to a Pokémon Trainer.
-<!-- 
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
 
-```
-Give examples
-```
+#### General
+- Represent a fictitious trainer name
+- Have relevant information presented on at least 3 different pokemon:
+    - display information regarding the pokemon’s:
+        - Hp
+        - Attack
+        - Defense
+        - At least one ability
+
+
+#### GitHub
+- Deploy to GitHub pages
+- Have an active GitHub repo with multiple commits and branches.
+
+#### Technical
+- Have a Pokemon Class which will be able to create instances of pokemon with the following properties:
+    - hp - integer
+    - attack - integer
+    - defense - integer
+    - abilities - array of strings
+- Have a Trainer Class which will have a container object to store all your pokemon objects inside of it. 
+    - have a method named all
+        - accepts no parameters
+        - returns an array of Pokemon objects
+    - have a method named get
+        - accepts 1 parameter called name
+        - returns a Pokemon object housing information for the pokemon it found
+    - have a method named add
+        - accepts 1 parameter called pokemonObject
+        - adds the pokemon object to the trainer's container object for all his pokemon
+- retrieve pokemon information via the Pokemon API
+- retrieve information using javascript ajax calls
+- have all CSS code written in SASS
+- use a front-end framework like materialize/bootstrap/skeleton to integrate the grid system.
 
 ### Installing
 
@@ -58,9 +88,11 @@ Add additional notes about how to deploy this on a live system
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Bootstrap](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
+* [Sass](https://maven.apache.org/) - Style Sheet Language
+* [Koala](http://koala-app.com) - GUI App for Sass to CSS Compilation
+* [VSCode](https://code.visualstudio.com) - Source code editor
+* [axios](https://github.com/axios/axios) - Promise based HTTP client
 
 ## Contributing
 
@@ -72,9 +104,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Shahid Sarker** - *Initial work* - [shahidsarker](https://github.com/shahidsarker)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
@@ -85,4 +116,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
--->

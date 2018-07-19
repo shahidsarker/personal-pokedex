@@ -1,8 +1,98 @@
 // ///////////
 @import 'colors';
 //
-.pokemon {
+
+
+div.row.main {
+    border: solid $redtop;
+    border-width: 0 15px;
+    background: $ballwhitemid;
+}
+
+
+body {
+    background-image: url('media/Grass_Type.jpg');
+    div.header {
+        background-color: $redtop;
+        margin-top: 20px;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        h1 {
+            color: $ballwhitebottom;
+            margin: 2%;
+        }
+    }
+    div.primary {
+        background: $ballwhitebottom;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    div.secondary {
+        background: #91B1C1;
+        border: $redtop solid;
+        border-width: 0 0 0 15px;
+    }
     
+
+    div.footer {
+        background-color: $ballwhitemid;
+        border: solid $redtop;
+        border-width: 15px 15px 15px 15px; // bottom-border-radius: .25rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+}
+
+
+.btn-outline-success {
+    background: #FBECEE;
+}
+
+
+#pokemon-menu {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+}
+
+.statbar {
+    background-color: lightgray;
+    padding: 0;
+    border-radius: 1rem;
+}
+
+.statbar-stat {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    text-align: center;
+}
+
+#bar-attack {
+    background-color: cornflowerblue;
+}
+
+#bar-defense {
+    background-color: pink;
+}
+
+#bar-hp {
+    background-color: green;
+}
+
+.poke-info {
+    font-weight: bold;
+}
+
+.pokemon {
+    .pokemon-front {
+        background-color: #DAE5EA;
+        border: 1px solid $ballbutton;
+        padding: 15px;
+        margin: 10px;
+        width: 200px;
+        border-radius: 1rem;
+    }
     .normal-type {
         background-color: $normal-type;
     }
@@ -57,94 +147,4 @@
     .fairy-type {
         background-color: $fairy-type;
     }
-}
-
-div.row.main {
-    border: solid $redtop;
-    border-width: 0 15px;
-    background: $ballwhitemid;
-}
-
-img.pokemon-front {
-    background-color: #DAE5EA;
-    border: 1px solid $ballbutton;
-    padding: 15px;
-    margin: 10px;
-    width: 200px;
-    border-radius: 1rem;
-}
-
-
-
-body {
-    background-image: url('media/Grass_Type.jpg');
-    div.header {
-        background-color: $redtop;
-        margin-top: 20px;
-        border-top-left-radius: 1rem;
-        border-top-right-radius: 1rem;
-        h1 {
-            color: $ballwhitebottom;
-            margin: 2%;
-        }
-    }
-    div.primary {
-        background: $ballwhitebottom;
-        margin-top: 2%;
-        margin-bottom: 2%;
-    }
-
-    div.secondary {
-        background: #91B1C1;
-        border: $redtop solid;
-        border-width: 0 0 0 15px;
-    }
-    
-
-    div.footer {
-        background-color: $ballwhitemid;
-        border: solid $redtop;
-        border-width: 15px 15px 15px 15px; // bottom-border-radius: .25rem;
-        border-bottom-left-radius: 1rem;
-        border-bottom-right-radius: 1rem;
-    }
-}
-
-
-
-.btn-outline-danger {
-    background: #FBECEE;
-}
-
-#pokemon-menu {
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.statbar {
-    background-color: lightgray;
-    padding: 0;
-    border-radius: 1rem;
-}
-
-.statbar-stat {
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    text-align: center;
-}
-
-#bar-attack {
-    background-color: cornflowerblue;
-}
-
-#bar-defense {
-    background-color: pink;
-}
-
-#bar-hp {
-    background-color: green;
-}
-
-.poke-info {
-    font-weight: bold;
 }

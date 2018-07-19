@@ -26,6 +26,7 @@ class Pokemon {
 // pokemon menu creator
 let pokeMenu = document.getElementById("pokemon-menu")
 
+
 class Trainer {
     constructor(trainerName) {
         this.trainerName = trainerName;
@@ -68,10 +69,11 @@ class Trainer {
             });
 
             this.trainerPokemon[pokemonObject.name] = pokemonObject;
+            
             let menuLink = document.createElement("li")
             menuLink.innerText = `${pokeName.capitalize()}`
             menuLink.setAttribute("onclick", `loadPokemon(${this.trainerName}, ${this.pokeCount})`)
-            menuLink.setAttribute("class", `btn btn-block btn-outline-danger`)
+            menuLink.setAttribute("class", `btn btn-block btn-lg btn-outline-success`)
             pokeMenu.appendChild(menuLink)
 
             this.pokeCount++

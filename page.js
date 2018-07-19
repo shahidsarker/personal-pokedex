@@ -3,8 +3,7 @@ let shahid = new Trainer("shahid")
 shahid.add(150)
 shahid.add(129)
 shahid.add(126)
-    //
-
+//
 
 
 
@@ -39,5 +38,7 @@ let loadPokemon = (trainer, pokemonIndex) => {
 
     let pokeType = document.getElementById("pokemon-type")
     pokeType.innerHTML = `<span class="badge badge-primary ${trainer.all()[pokemonIndex].types[0]}-type">${trainer.all()[pokemonIndex].types[0]}</span>`
+
+
 
 }

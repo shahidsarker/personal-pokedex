@@ -18,11 +18,11 @@ These instructions will get you a copy of the project up and running on your loc
 - Have an active GitHub repo with multiple commits and branches.
 
 #### Technical
-- Have a Pokemon Class which will be able to create instances of pokemon with several properties:
-- Have a Trainer Class which will have a container object to store all your pokemon objects inside of it. 
+- Have a Pokemon Class which will be able to create instances of Pokemon with several properties
+- Have a Trainer Class which will have a container object to store Pokemon objects
     - have a method named `all()` which returns an array of Pokemon objects
-    - have a method named `get()` which accepts 1 parameter called `name` and returns a Pokemon object housing information for the Pokémon it found
-    - have a method named `add()` which accepts 1 parameter called pokemonObject and adds it to the trainer's container object for all their Pokémon
+    - have a method named `get()` which accepts a `name` and returns a Pokemon object housing information for the Pokémon
+    - have a method named `add()` which adds it to the trainer's container object for all their Pokémon
 - retrieve Pokémon information via the Pokéapi
 - retrieve information using Javascript AJAX calls
 - have all CSS code written in Sass

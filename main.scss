@@ -56,16 +56,9 @@
     .fairy-type {
         background-color: $fairy-type;
     }
-    // ul {
-    //     list-style-type: none;
-    // }
 }
 
 div.row.main {
-    // justify-content: center;
-    // * {
-    //     border: 1px solid black;
-    // }
     border: solid $redtop;
     border-width: 0 15px;
     background: $ballwhitemid;
@@ -73,55 +66,23 @@ div.row.main {
 
 div.header {
     background-color: $redtop;
-    // padding-left: 15px;
     margin-top: 20px;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     h1 {
         color: $ballwhitebottom;
         margin: 2%;
-        // font-weight: bold;
     }
 }
 
 div.footer {
     background-color: $ballwhitemid;
     border: solid $redtop;
-    border-width: 15px 15px 15px 15px;
-    // bottom-border-radius: .25rem;
+    border-width: 15px 15px 15px 15px; // bottom-border-radius: .25rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
 }
 
-// .container {
-//     border: 1px solid black;
-//     #primary {
-//         border: 1px solid green;
-//     }
-//     #secondary {
-//         // float: right;
-//         // position: fixed;
-//         // right: 100px;
-//         // top: 5%;
-//         button {
-//             // border: 1px solid $normal-type;
-//             // background-color: $normal-type;
-//             // border-radius: 12px;
-//             // margin: 5px;
-//             // font-size: 1.5em;
-//             // box-shadow: 1px 1px 5px black;
-//         }
-//     }
-// }
-// #pokemon-front-sprite {
-//     border: 1px solid black;
-// }
-// element.style {
-//     width: %;
-//     height: .75em;
-//     background-color: red;
-//     display: inline-block;
-// }
 img.pokemon-front {
     background-color: #DAE5EA;
     border: 1px solid $ballbutton;
@@ -163,7 +124,6 @@ div.secondary {
 }
 
 .statbar-stat {
-    // background-color: cornflowerblue;
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     text-align: center;

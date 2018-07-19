@@ -1,9 +1,11 @@
-String.prototype.capitalize = function() {
+String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
-String.prototype.toProperCase = function() {
-    return this.replace(/\w\S*/g, function(txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+String.prototype.toProperCase = function () {
+    return this.replace(/\w\S*/g, function (txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
 };
 
 
@@ -41,7 +43,7 @@ class Trainer {
         // axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
         axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${id}.json`).then((response) => {
             let pokedata = response.data
-                // console.log(pokedata)
+            // console.log(pokedata)
             let pokeName = pokedata.name;
             let pokeId = pokedata.id;
             let pokeHp = pokedata.stats[5].base_stat;
@@ -52,11 +54,11 @@ class Trainer {
             let pokeTypesArray = pokedata.types;
 
             let pokemonObject = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL, this.pokeCount)
-                // pushes abilities to pokemonObject
+            // pushes abilities to pokemonObject
             pokedata.abilities.forEach(element => {
                 pokemonObject.ability.push((element.ability.name))
-                    // get rid of dash and capitalize:
-                    // pokemonObject.ability.push((element.ability.name).split('-').join(' ').toProperCase())
+                // get rid of dash and capitalize:
+                // pokemonObject.ability.push((element.ability.name).split('-').join(' ').toProperCase())
             });
 
             pokeTypesArray.forEach(element => {
@@ -67,10 +69,7 @@ class Trainer {
             let menuLink = document.createElement("li")
             menuLink.innerText = `${pokeName.capitalize()}`
             menuLink.setAttribute("onclick", `loadPokemon(${this.trainerName}, ${this.pokeCount})`)
-                // menuLink.classList.add("bounce")
             menuLink.setAttribute("class", `btn btn-block btn-outline-danger`)
-                // < li class="btn btn-block btn-outline-danger" > Pokemon A</li >
-                // menuLink.setAttribute("class", `${pokemonObject.types[0].type}-type `)
             pokeMenu.appendChild(menuLink)
 
             this.pokeCount++

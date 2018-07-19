@@ -69,7 +69,7 @@ class Trainer {
             });
 
             this.trainerPokemon[pokemonObject.name] = pokemonObject;
-            
+
             let menuLink = document.createElement("li")
             menuLink.innerText = `${pokeName.capitalize()}`
             menuLink.setAttribute("onclick", `loadPokemon(${this.trainerName}, ${this.pokeCount})`)

@@ -40,10 +40,12 @@ class Trainer {
         return this.trainerPokemon[name]
     }
     add(id) {
+        // toggle between two APIs based on availability
+        //      pokeapi request (works with name or id of pokemon)
         // axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
+        //      NYCDA-specific api (works with id only)
         axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${id}.json`).then((response) => {
             let pokedata = response.data
-            // console.log(pokedata)
             let pokeName = pokedata.name;
             let pokeId = pokedata.id;
             let pokeHp = pokedata.stats[5].base_stat;

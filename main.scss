@@ -64,24 +64,7 @@ div.row.main {
     background: $ballwhitemid;
 }
 
-div.header {
-    background-color: $redtop;
-    margin-top: 20px;
-    border-top-left-radius: 1rem;
-    border-top-right-radius: 1rem;
-    h1 {
-        color: $ballwhitebottom;
-        margin: 2%;
-    }
-}
 
-div.footer {
-    background-color: $ballwhitemid;
-    border: solid $redtop;
-    border-width: 15px 15px 15px 15px; // bottom-border-radius: .25rem;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-}
 
 img.pokemon-front {
     background-color: #DAE5EA;
@@ -94,19 +77,39 @@ img.pokemon-front {
 
 body {
     background-image: url('media/Grass_Type.jpg');
+    div.header {
+        background-color: $redtop;
+        margin-top: 20px;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        h1 {
+            color: $ballwhitebottom;
+            margin: 2%;
+        }
+    }
+    div.primary {
+        background: $ballwhitebottom;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    div.secondary {
+        background: #91B1C1;
+        border: $redtop solid;
+        border-width: 0 0 0 15px;
+    }
+    
+
+    div.footer {
+        background-color: $ballwhitemid;
+        border: solid $redtop;
+        border-width: 15px 15px 15px 15px; // bottom-border-radius: .25rem;
+        border-bottom-left-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
 }
 
-div.primary {
-    background: $ballwhitebottom;
-    margin-top: 2%;
-    margin-bottom: 2%;
-}
 
-div.secondary {
-    background: #91B1C1;
-    border: $redtop solid;
-    border-width: 0 0 0 15px;
-}
 
 .btn-outline-danger {
     background: #FBECEE;

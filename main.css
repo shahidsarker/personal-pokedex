@@ -1,3 +1,70 @@
+@import url("https://fonts.googleapis.com/css?family=Dosis:400|Fredoka+One");
+div.row.main {
+  border: solid #ee1515;
+  border-width: 0 1rem;
+  background: #f0f0f0; }
+
+body {
+  background: #11998e;
+  background: linear-gradient(to right, #11998e, #3DDC97); }
+  body div.header {
+    background-color: #ee1515;
+    margin-top: 2.5%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem; }
+    body div.header h1 {
+      color: white;
+      margin: 2%;
+      font-family: 'Fredoka One', cursive; }
+  body div.primary {
+    background: #f0f0f0;
+    margin-top: 2%;
+    margin-bottom: 2%; }
+  body div.secondary {
+    background: #91B1C1;
+    border: #ee1515 solid;
+    border-width: 0 0 0 15px; }
+  body div.footer {
+    background-color: #f0f0f0;
+    margin-bottom: 2.5%;
+    border: solid #ee1515;
+    border-width: 1rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem; }
+
+.btn-outline-success {
+  background: white; }
+
+#pokemon-menu {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: 'Dosis', sans-serif;
+  letter-spacing: .1rem; }
+
+.statbar {
+  background-color: lightgray;
+  padding: 0;
+  border-radius: 1rem; }
+  .statbar .statbar-stat {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    text-align: center; }
+  .statbar #bar-attack {
+    background-color: #256EFF; }
+  .statbar #bar-defense {
+    background-color: #FFD166; }
+  .statbar #bar-hp {
+    background-color: #06C392; }
+
+.pokemon .pokemon-front {
+  background-color: #DAE5EA;
+  border: 1px solid #222224;
+  padding: 15px;
+  margin: 10px;
+  width: 200px;
+  border-radius: 1rem; }
+.pokemon .poke-info {
+  font-weight: bold; }
 .pokemon .normal-type {
   background-color: #A8A878; }
 .pokemon .fire-type {
@@ -34,76 +101,5 @@
   background-color: #B8B8D0; }
 .pokemon .fairy-type {
   background-color: #EE99AC; }
-
-div.row.main {
-  border: solid #ee1515;
-  border-width: 0 15px;
-  background: #f0f0f0; }
-
-div.header {
-  background-color: #ee1515;
-  margin-top: 20px;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem; }
-  div.header h1 {
-    color: #f0f0f0;
-    margin: 2%; }
-
-div.footer {
-  background-color: #f0f0f0;
-  border: solid #ee1515;
-  border-width: 15px 15px 15px 15px;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem; }
-
-img.pokemon-front {
-  background-color: #DAE5EA;
-  border: 1px solid #222224;
-  padding: 15px;
-  margin: 10px;
-  width: 200px;
-  border-radius: 1rem; }
-
-body {
-  background-image: url("media/Grass_Type.jpg"); }
-
-div.primary {
-  background: #f0f0f0;
-  margin-top: 2%;
-  margin-bottom: 2%; }
-
-div.secondary {
-  background: #91B1C1;
-  border: #ee1515 solid;
-  border-width: 0 0 0 15px; }
-
-.btn-outline-danger {
-  background: #FBECEE; }
-
-#pokemon-menu {
-  margin-top: 5%;
-  margin-bottom: 5%; }
-
-.statbar {
-  background-color: lightgray;
-  padding: 0;
-  border-radius: 1rem; }
-
-.statbar-stat {
-  border-top-left-radius: 1rem;
-  border-bottom-left-radius: 1rem;
-  text-align: center; }
-
-#bar-attack {
-  background-color: cornflowerblue; }
-
-#bar-defense {
-  background-color: pink; }
-
-#bar-hp {
-  background-color: green; }
-
-.poke-info {
-  font-weight: bold; }
 
 /*# sourceMappingURL=main.css.map */

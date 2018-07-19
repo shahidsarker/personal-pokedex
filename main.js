@@ -1,9 +1,11 @@
-String.prototype.capitalize = function() {
+String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
-String.prototype.toProperCase = function() {
-    return this.replace(/\w\S*/g, function(txt) { return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase(); });
+String.prototype.toProperCase = function () {
+    return this.replace(/\w\S*/g, function (txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    });
 };
 
 
@@ -24,6 +26,7 @@ class Pokemon {
 // pokemon menu creator
 let pokeMenu = document.getElementById("pokemon-menu")
 
+
 class Trainer {
     constructor(trainerName) {
         this.trainerName = trainerName;
@@ -38,10 +41,12 @@ class Trainer {
         return this.trainerPokemon[name]
     }
     add(id) {
+        // toggle between two APIs based on availability
+        //      pokeapi request (works with name or id of pokemon)
         // axios.get(`https://pokeapi.co/api/v2/pokemon/${id}/`).then((response) => {
+        //      NYCDA-specific api (works with id only)
         axios.get(`https://pokeapi-nycda.firebaseio.com/pokemon/${id}.json`).then((response) => {
             let pokedata = response.data
-                // console.log(pokedata)
             let pokeName = pokedata.name;
             let pokeId = pokedata.id;
             let pokeHp = pokedata.stats[5].base_stat;
@@ -52,11 +57,11 @@ class Trainer {
             let pokeTypesArray = pokedata.types;
 
             let pokemonObject = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL, this.pokeCount)
-                // pushes abilities to pokemonObject
+            // pushes abilities to pokemonObject
             pokedata.abilities.forEach(element => {
                 pokemonObject.ability.push((element.ability.name))
-                    // get rid of dash and capitalize:
-                    // pokemonObject.ability.push((element.ability.name).split('-').join(' ').toProperCase())
+                // get rid of dash and capitalize:
+                // pokemonObject.ability.push((element.ability.name).split('-').join(' ').toProperCase())
             });
 
             pokeTypesArray.forEach(element => {
@@ -64,13 +69,11 @@ class Trainer {
             });
 
             this.trainerPokemon[pokemonObject.name] = pokemonObject;
+
             let menuLink = document.createElement("li")
             menuLink.innerText = `${pokeName.capitalize()}`
             menuLink.setAttribute("onclick", `loadPokemon(${this.trainerName}, ${this.pokeCount})`)
-                // menuLink.classList.add("bounce")
-            menuLink.setAttribute("class", `btn btn-block btn-outline-danger`)
-                // < li class="btn btn-block btn-outline-danger" > Pokemon A</li >
-                // menuLink.setAttribute("class", `${pokemonObject.types[0].type}-type `)
+            menuLink.setAttribute("class", `btn btn-block btn-lg btn-outline-success`)
             pokeMenu.appendChild(menuLink)
 
             this.pokeCount++

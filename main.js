@@ -31,12 +31,10 @@ class Trainer {
         this.pokemonArray = [];
         this.pokeCount = 0;
     }
-    all(num) {
-        // console.log(Object.values(this.trainerPokemon))
+    all() {
         return Object.values(this.trainerPokemon)
     }
     get(name) {
-        // console.log(this.trainerPokemon[name]);
         return this.trainerPokemon[name]
     }
     add(id) {
@@ -52,7 +50,6 @@ class Trainer {
             let pokeFrontURL = pokedata.sprites.front_default
             let pokeBackURL = pokedata.sprites.back_default
             let pokeTypesArray = pokedata.types;
-            console.log(pokeTypesArray[0].type.name)
 
             let pokemonObject = new Pokemon(pokeName, pokeId, pokeHp, pokeAtt, pokeDef, pokeFrontURL, pokeBackURL, this.pokeCount)
                 // pushes abilities to pokemonObject
@@ -77,16 +74,8 @@ class Trainer {
             pokeMenu.appendChild(menuLink)
 
             this.pokeCount++
-                // console.log(pokemonObject);
 
         })
 
     }
 }
-
-// let shahid = new Trainer("shahid")
-// shahid.add(150)
-//     // shahid.get("mewtwo")
-// shahid.add(129)
-//     // shahid.get("magikarp")
-// shahid.add(126)

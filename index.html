@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Pokédex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
@@ -18,7 +18,6 @@
             <h1 class="display-3">Pokédex</h1>
         </div>
         <div class="row main">
-            <!-- <div class="col-2"></div> -->
             <div class="col-8 primary">
                 <div class="row">
                     <div class="col-12 text-center">
@@ -27,15 +26,16 @@
                     </div>
                     <div class="col-12 text-center"><img class="pokemon-front" id="pokemon-front-sprite" src="media/Missingno_RB.png"></div>
                 </div>
-                <dl class="row pokemon">
+                <!-- without bars
+                    <dl class="row pokemon">
                     <dt class="col-5 text-right">HP</dt>
                     <dd class="col-7" id="pokemon-hp">33</dd>
 
                     <dt class="col-5 text-right">Attack</dt>
-                    <dd class="col-7" id="pokemon-attack">136</dd>
+                    <dd class="col-7" id="pokemon-attack">136<span id="bar-attack"></span></dd>
 
                     <dt class="col-5 text-right">Defense</dt>
-                    <dd class="col-7" id="pokemon-defense">0</dd>
+                    <dd class="col-7" id="pokemon-defense">0<span id="bar-defense"></span></dd>
 
                     <dt class="col-5 text-right">Abilities</dt>
                     <dd class="col-7 text-capitalize" id="pokemon-abilities">None</dd>
@@ -43,20 +43,51 @@
                     <dt class="col-5 text-right">Type</dt>
                     <dd class="col-7 text-capitalize" id="pokemon-type"><span class="normal-type badge badge-primary">normal</span></dd>
 
-                </dl>
+                </dl> -->
+                <div class="row pokemon">
+                    <div class="col-4 text-right poke-info">HP</div>
+                    <div class="col-2 text-center" id="pokemon-hp">33</div>
+                    <div class="col-4 statbar">
+                        <div id="bar-hp" class="statbar-stat" style="width:13%;">&nbsp;</div>
+                    </div>
+                    <div class="col-2"></div>
+
+                    <div class="col-4 text-right poke-info">Attack</div>
+                    <div class="col-2 text-center" id="pokemon-attack">136</div>
+                    <div class="col-4 statbar">
+                        <div id="bar-attack" class="statbar-stat" style="width:72%;">&nbsp;</div>
+                    </div>
+                    <div class="col-1"></div>
+
+                    <div class="col-4 text-right poke-info">Defense</div>
+                    <div class="col-2 text-center" id="pokemon-defense">0 </div>
+                    <div class="col-4 statbar">
+                        <div id="bar-defense" class="statbar-stat" style="width:0%;">&nbsp;</div>
+                    </div>
+                    <div class="col-2"></div>
+
+                    <div class="col-4 text-right poke-info">Abilities</div>
+                    <div class="col-8 text-capitalize" id="pokemon-abilities">None</div>
+
+                    <div class="col-4 text-right poke-info">Type</div>
+                    <div class="col-8 text-capitalize" id="pokemon-type">
+                        <span class="normal-type badge badge-primary">normal</span>
+                    </div>
+
+
+                </div>
+
             </div>
             <div class="col-4 secondary text-center">
                 <!-- <h6 class="h5" id="pokemon-menu-title">Pokémon</h6> -->
 
                 <ul class="list-unstyled" id="pokemon-menu">
-                    <!-- <li class="btn btn-block btn-outline-danger">Pokemon A</li> -->
                 </ul>
 
             </div>
             <!-- <div class="col-2"></div> -->
         </div>
         <div class="row footer text-right">
-            <!-- <p class="text-right">Footer text blah blah blah</p> -->
 
         </div>
     </div>

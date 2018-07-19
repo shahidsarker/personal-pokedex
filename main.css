@@ -84,4 +84,26 @@ div.secondary {
   margin-top: 5%;
   margin-bottom: 5%; }
 
+.statbar {
+  background-color: lightgray;
+  padding: 0;
+  border-radius: 1rem; }
+
+.statbar-stat {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  text-align: center; }
+
+#bar-attack {
+  background-color: cornflowerblue; }
+
+#bar-defense {
+  background-color: pink; }
+
+#bar-hp {
+  background-color: green; }
+
+.poke-info {
+  font-weight: bold; }
+
 /*# sourceMappingURL=main.css.map */

@@ -1,12 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis:400|Fredoka+One");
 div.row.main {
   border: solid #ee1515;
-  border-width: 0 15px;
+  border-width: 0 1rem;
   background: #f0f0f0; }
 
 body {
-  background: #00F260;
-  background: linear-gradient(to right, #11998e, #38ef7d); }
+  background: #11998e;
+  background: linear-gradient(to right, #11998e, #3DDC97); }
   body div.header {
     background-color: #ee1515;
     margin-top: 2.5%;
@@ -28,7 +28,7 @@ body {
     background-color: #f0f0f0;
     margin-bottom: 2.5%;
     border: solid #ee1515;
-    border-width: 15px 15px 15px 15px;
+    border-width: 1rem;
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem; }
 

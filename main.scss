@@ -3,21 +3,20 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis:400|Fredoka+One');
 // font-family: 'Dosis', sans-serif;
 // font-family: 'Fredoka One', cursive;
-//
 
 $corner-radius: 1rem;
 
 
 div.row.main {
     border: solid $redtop;
-    border-width: 0 15px;
+    border-width: 0 1rem;
     background: $ballwhitemid;
 }
 
 
 body {
-    background: #00F260;
-    background: linear-gradient(to right, #11998e, #38ef7d);
+    background: #11998e;
+    background: linear-gradient(to right, #11998e, #3DDC97);
     div.header {
         background-color: $redtop;
         margin-top: 2.5%;
@@ -47,7 +46,7 @@ body {
         background-color: $ballwhitemid;
         margin-bottom: 2.5%;
         border: solid $redtop;
-        border-width: 15px 15px 15px 15px; 
+        border-width: 1rem; 
         border-bottom-left-radius: $corner-radius;
         border-bottom-right-radius: $corner-radius;
     }
@@ -88,12 +87,6 @@ body {
         background-color: $hp-bar;
     }
 }
-
-
-
-
-
-
 
 .pokemon {
     .pokemon-front {

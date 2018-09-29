@@ -16,6 +16,7 @@ These instructions will get you a copy of the project up and running on your loc
 #### GitHub
 - Deploy to GitHub pages
 - Have an active GitHub repo with multiple commits and branches.
+- Display page properly
 
 #### Technical
 - Have a Pokemon Class which will be able to create instances of Pokemon with several properties
